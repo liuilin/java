@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#username").blur(function () {
+                //获取文本框的内容
+                var username = $(this).val();
+                //发送ajax
+                //期望服务器响应回的数据格式：{"userExsit":true,"msg":"此用户名太受欢迎,请更换一个"}
+                //                         {"userExsit":false,"msg":"用户名可用"}
+                $.get(
+                    "findUserServlet",
+                    {"username": username},
+                    function (data) {
+                        alert(data);
+                        //
+                        var span = $("#s_username");
+                        if (data.userExsit) {
+                            //用户名存在
+                            span.css("color", "red");
+                            span.html(data.msg);
+                        } else {
+                            //不存在
+                            span.css("color", "black");
+                            span.html(data.msg);
+                        }
+                    },
+                    "json"
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+
+<form action="">
+    <input type="text" id="username" name="username" placeholder="请输入用户名:">
+    <span id="s_username"></span>
+    <br>
+    <input type="text" name="password" placeholder="请输入密码:">
+</form>
+</body>
+</html>

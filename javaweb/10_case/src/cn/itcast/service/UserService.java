@@ -1,0 +1,68 @@
+package cn.itcast.service;
+
+import cn.itcast.domain.PageBean;
+import cn.itcast.domain.User;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 用户管理的业务接口
+ * @author Gakki
+ * @date 2018/11/20 - 19:14
+ */
+public interface UserService {
+
+    /**
+     * 查询所有用户信息
+     * @return
+     */
+    List<User> findAll();
+
+    /**
+     * 登录方法
+     * @param user
+     * @return
+     */
+    User login(User user);
+
+    /**
+     * 添加用户
+     * @param user
+     */
+    void addUser(User user);
+
+    /**
+     * 删除用户
+     * @param id
+     */
+    void delUser(String id);
+
+    /**
+     * 查询用户
+     * @param id
+     * @return
+     */
+    User findUserById(String id);
+
+    /**
+     * 修改用户
+     * @param user
+     */
+    void updateUser(User user);
+
+    /**
+     * 批量删除用户
+     * @param ids
+     */
+    void delSelectedUser(String[] ids);
+
+    /**
+     * 分页条件查询
+     * @param currentPage
+     * @param rows
+     * @param condition
+     * @return
+     */
+    PageBean<User> findUserByPage(String currentPage, String rows, Map<String, String[]> condition);
+}

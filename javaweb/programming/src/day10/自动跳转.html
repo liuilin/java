@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转</title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        span {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+<p><span id="span">5</span>秒之后，自动跳转到首页...</p>
+
+<script>
+    /*
+    分析：
+       1.显示页面效果  <p>
+       2.倒计时读秒效果实现
+           2.1 定义一个方法，获取span标签，修改span标签体内容，时间--
+           2.2 定义一个定时器，1秒执行一次该方法
+       3.在方法中判断时间如果<= 0 ，则跳转到首页
+
+ */
+    var num = 5;
+    var span = document.getElementById("span");
+
+    function fun() {
+        num--;
+        if (num <= 0) {
+            location.href = "http://localhost:63342/javaweb/test/day10/%E8%BD%AE%E6%92%AD%E5%9B%BE.html?_ijt=4pqrsuu8qlm6614pocru3bu2ik";
+        }
+        span.innerHTML = num;
+    }
+
+    setInterval(fun, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+package com.imugen.design.structural.proxy;
+
+/**
+ * @author Daniel Liu 2019/9/22 8:11
+ */
+public class Order {
+    private Object orderInfo;
+    private Integer userId;
+
+    public Object getOrderInfo() {
+        return orderInfo;
+    }
+
+    public void setOrderInfo(Object orderInfo) {
+        this.orderInfo = orderInfo;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+}

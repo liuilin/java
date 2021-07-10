@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#name").mouseover(function () {
+                alert("Gakki come");
+            }).mouseout(function () {
+                alert("Gakki go");
+            });
+
+            $("#name").focus();
+
+        })
+
+
+    </script>
+</head>
+<body>
+<input id="name" type="text" value="绑定点击事件">
+</body>
+</html>
