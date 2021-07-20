@@ -8,7 +8,7 @@ import com.imugen.design.behavioral.strategy.before.UserType;
 public class Gold implements Strategy {
     @Override
     public double compute(long money) {
-        System.out.println("黄金会员 8折");
+        System.out.println("黄金会员 8折.");
         return money * 0.8;
     }
 
