@@ -2,7 +2,7 @@
 *target/
 *.idea
 *.iml
-*.xml
+#*.xml
 *.bak
 *.mvn/
 gradle/
