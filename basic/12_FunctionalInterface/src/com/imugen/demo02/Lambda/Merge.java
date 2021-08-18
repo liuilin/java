@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import org.junit.jupiter.api.Test;
 
 /**
  * @author Daniel
@@ -74,7 +73,7 @@ public class Merge {
         return studentScoreList;
     }
 
-    @Test
+//    @Test
     void main() {
         List<StudentScore> studentScores = buildATestList();
         studentScores.forEach(System.out::println);
