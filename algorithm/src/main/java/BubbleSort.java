@@ -10,10 +10,10 @@ public class BubbleSort {
         bubbleSort(arr);
         System.out.print(Arrays.toString(arr)); // [1, 2, 4, 5, 6, 8]
         System.out.println();
-        System.out.println(search(arr, 6));
+        System.out.println(binarySearch(arr, 6));
     }
 
-    public static int search(int[] nums, int target) {
+    public static int binarySearch(int[] nums, int target) {
         int pivot, left = 0, right = nums.length - 1;
         while (left <= right) {
             pivot = left + (right - left) / 2;
