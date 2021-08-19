@@ -2,43 +2,64 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
+class Node {
+    public int value;
+    public Node left;
+    public Node right;
+}
+
+
 /**
- * 递归二叉树
+ * 递归遍历二叉树
  *
  * @author liuqiang
  * @since 2021-08-18
  */
 public class Code01_BinaryTreeWithRecursive {
     public static void main(String[] args) {
-        BinaryTreeNode node10 = new BinaryTreeNode(10, null, null);
-        BinaryTreeNode node8 = new BinaryTreeNode(8, null, null);
-        BinaryTreeNode node9 = new BinaryTreeNode(9, null, node10);
-        BinaryTreeNode node7 = new BinaryTreeNode(7, null, null);
-        BinaryTreeNode node6 = new BinaryTreeNode(6, null, null);
-        BinaryTreeNode node5 = new BinaryTreeNode(5, node8, node9);
-        BinaryTreeNode node4 = new BinaryTreeNode(4, null, null);
-        BinaryTreeNode node3 = new BinaryTreeNode(3, node6, node7);
-        BinaryTreeNode node2 = new BinaryTreeNode(2, node4, node5);
-        BinaryTreeNode node1 = new BinaryTreeNode(1, node2, node3);
+        Node node7 = new Node(7, null, null);
+        Node node6 = new Node(6, null, null);
+        Node node5 = new Node(5, null, null);
+        Node node4 = new Node(4, null, null);
+        Node node3 = new Node(3, node6, node7);
+        Node node2 = new Node(2, node4, node5);
+        Node node1 = new Node(1, node2, node3);
 
-        pre(node1);
+        System.out.println("==================== 前序 ====================");
+        pre(node1); System.out.println();
+        System.out.println("==================== 中序 ====================");
+        middle(node1); System.out.println();
+        System.out.println("==================== 后序 ====================");
+        post(node1);
     }
 
-    private static void pre(BinaryTreeNode head) {
+    private static void pre(Node head) {
         if (head == null) {
             return;
         }
-        System.out.println(head.data);
+        System.out.print(head.value + "\t");
         pre(head.left);
         pre(head.right);
     }
-}
 
-@Getter
-@Setter
-@AllArgsConstructor
-class BinaryTreeNode {
-    public int data;
-    public BinaryTreeNode left;
-    public BinaryTreeNode right;
+    private static void middle(Node head) {
+        if (head == null) {
+            return;
+        }
+        middle(head.left);
+        System.out.print(head.value + "\t");
+        middle(head.right);
+    }
+
+    private static void post(Node head) {
+        if (head == null) {
+            return;
+        }
+        post(head.left);
+        post(head.right);
+        System.out.print(head.value + "\t");
+    }
 }

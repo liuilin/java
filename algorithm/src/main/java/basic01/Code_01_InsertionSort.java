@@ -2,6 +2,9 @@ package basic01;
 
 import java.util.Arrays;
 
+/**
+ * 插入排序
+ */
 public class Code_01_InsertionSort {
 
 	public static void insertionSort(int[] arr) {

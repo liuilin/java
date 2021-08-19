@@ -2,6 +2,9 @@ package basic01;
 
 import java.util.Arrays;
 
+/**
+ * 归并排序
+ */
 public class Code_05_MergeSort {
 
 	public static void mergeSort(int[] arr) {

@@ -2,6 +2,9 @@ package basic01;
 
 import java.util.Arrays;
 
+/**
+ * 快排
+ */
 public class Code_04_QuickSort {
 
 	public static void quickSort(int[] arr) {
