@@ -8,7 +8,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {2, 5, 8, 4, 6, 1};
         bubbleSort(arr);
-        System.out.print(Arrays.toString(arr)); // [1, 2, 4, 5, 6, 8]
+        System.out.print(Arrays.toString(arr)); // [1, 2, 4, 5, 6, 8].
         System.out.println();
         System.out.println(binarySearch(arr, 6));
     }
