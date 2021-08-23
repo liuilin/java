@@ -13,7 +13,7 @@ class Node {
 
 
 /**
- * 递归遍历二叉树
+ * 递归遍历二叉树.
  *
  * @author liuqiang
  * @since 2021-08-18
