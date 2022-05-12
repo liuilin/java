@@ -8,11 +8,11 @@
     <name>parent-modules</name>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>design_pattern</module>
-        <module>Guava</module>
-        <module>algorithm</module>
-    </modules>
+    <!--    <modules>-->
+    <!--        <module>design_pattern</module>-->
+    <!--        <module>Guava</module>-->
+    <!--        <module>algorithm</module>-->
+    <!--    </modules>-->
 
     <properties>
         <!--        <spring.boot.version>2.1.0.RELEASE</spring.boot.version>-->
@@ -38,7 +38,7 @@
         <byte-buddy.version>1.11.20</byte-buddy.version>
 
         <!-- logging -->
-        <org.slf4j.version>2.0.0-alpha5</org.slf4j.version>
+        <org.slf4j.version>1.7.32</org.slf4j.version>
         <logback.version>1.2.6</logback.version>
 
         <!-- plugins -->
@@ -75,6 +75,11 @@
         <lombok.version>1.18.20</lombok.version>
         <h2.version>1.4.200</h2.version>
         <guava.version>31.0.1-jre</guava.version>
+
+
+        <!--todo delete-->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -130,21 +135,21 @@
             <artifactId>slf4j-api</artifactId>
             <version>${org.slf4j.version}</version>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>ch.qos.logback</groupId>-->
-        <!--            <artifactId>logback-classic</artifactId>-->
-        <!--            <version>${logback.version}</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>ch.qos.logback</groupId>-->
-        <!--            <artifactId>logback-core</artifactId>-->
-        <!--            <version>${logback.version}</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.slf4j</groupId>-->
-        <!--            <artifactId>jcl-over-slf4j</artifactId>-->
-        <!--            <version>${org.slf4j.version}</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${org.slf4j.version}</version>
+        </dependency>
 
         <!--        &lt;!&ndash; test &ndash;&gt;-->
         <!--        <dependency>-->
