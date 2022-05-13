@@ -7,7 +7,11 @@ public enum UserType {
     /**
      * 白银会员
      */
-    ORDINARY(0, "普通会员"), SILVER_VIP(1, "白银会员"), GOLD_VIP(2, "黄金会员"), PLATINUM_VIP(3, "白金会员");
+    ORDINARY(0, "普通会员"),
+    SILVER_VIP(1, "白银会员"),
+    GOLD_VIP(2, "黄金会员"),
+    PLATINUM_VIP(3, "白金会员")
+    ;
 
     int type;
     String grade;

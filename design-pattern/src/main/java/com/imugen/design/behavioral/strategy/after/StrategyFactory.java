@@ -21,58 +21,31 @@ public class StrategyFactory {
 
     private static Map<Integer, Strategy> map;
 
-    /*public static double getResult(long money, int type) {
-                double result = money;
-                if (money <= 1000) {
-                    return result;
-                }
-                if (type == UserType.SILVER_VIP.getType()) {
-                    new Silver();
-                } else if (type == UserType.GOLD_VIP.getType()) {
-                    new Gold();
-                } else if (type == UserType.PLATINUM_VIP.getType()) {
-                    new Platinum();
-                } else {
-                    System.out.println("普通会员 不打折");
-                    return result;
-                }
-                return result;
-            }*/
-    /*public static double getResult(long money, int type) {
-        if (money <= 1000) {
-            return (double) money;
-        }
-        Strategy strategy;
-        if (type == UserType.SILVER_VIP.getType()) {
-            strategy = new Silver();
-        } else if (type == UserType.GOLD_VIP.getType()) {
-            strategy = new Gold();
-        } else if (type == UserType.PLATINUM_VIP.getType()) {
-            strategy = new Platinum();
-        } else {
-            strategy = new Ordinary();
-        }
-        return strategy.compute(money);
-    }*/
-//    static { //或者用静态代码块
     public StrategyFactory() {
-
         List<Strategy> strategies = new ArrayList<>();
         strategies.add(new Ordinary());
         strategies.add(new Silver());
         strategies.add(new Gold());
         strategies.add(new Platinum());
         map = strategies.stream().collect(Collectors.toMap(Strategy::getType, strategy -> strategy));
-        /*等同上面
-        map = new HashMap<>();
-        for (Strategy strategy : strategies) {
-            map.put(strategy.getType(), strategy);
-        } */
     }
 
-    public static class Holder {
-        public static StrategyFactory instance = new StrategyFactory();
-    }
+//    public static double getResult(long money, int type) {
+//        if (money <= 1000) {
+//            return (double) money;
+//        }
+//        Strategy strategy;
+//        if (type == UserType.SILVER_VIP.getType()) {
+//            strategy = new Silver();
+//        } else if (type == UserType.GOLD_VIP.getType()) {
+//            strategy = new Gold();
+//        } else if (type == UserType.PLATINUM_VIP.getType()) {
+//            strategy = new Platinum();
+//        } else {
+//            strategy = new Ordinary();
+//        }
+//        return strategy.compute(money);
+//    }
 
     public static StrategyFactory getInstance() {
         return Holder.instance;
@@ -80,5 +53,9 @@ public class StrategyFactory {
 
     public Strategy get(int type) {
         return map.get(type);
+    }
+
+    public static class Holder {
+        public static StrategyFactory instance = new StrategyFactory();
     }
 }
