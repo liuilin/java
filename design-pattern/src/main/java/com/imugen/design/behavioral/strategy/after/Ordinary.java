@@ -7,7 +7,7 @@ import com.imugen.design.behavioral.strategy.before.UserType;
  */
 public class Ordinary implements Strategy {
     @Override
-    public double compute(long money) {
+    public long compute(long money) {
         System.out.println("普通会员 不打折");
         return money;
     }

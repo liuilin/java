@@ -21,6 +21,7 @@ public class StrategyFactory {
 
     private static Map<Integer, Strategy> map;
 
+    // 也可以用 static 静态方法
     public StrategyFactory() {
         List<Strategy> strategies = new ArrayList<>();
         strategies.add(new Ordinary());

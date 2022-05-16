@@ -7,7 +7,7 @@ import com.imugen.design.behavioral.strategy.before.UserType;
  */
 public class Silver implements Strategy {
     @Override
-    public double compute(long money) {
+    public long compute(long money) {
         System.out.println("白银会员优惠 50 元");
         return money - 50;
     }
