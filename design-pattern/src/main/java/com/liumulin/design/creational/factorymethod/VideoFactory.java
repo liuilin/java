@@ -1,4 +1,4 @@
-package com.liumulin.design.creational.factory;
+package com.liumulin.design.creational.factorymethod;
 
 /**
  * 简单工厂缺点：添加别的Video种类的时候需要修改Factory类，存在风险，违背了开闭原则

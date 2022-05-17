@@ -1,4 +1,4 @@
-package com.liumulin.design.creational.factory;
+package com.liumulin.design.creational.factorymethod;
 
 /**
  * @author Daniel Liu 2019/9/12 11:22

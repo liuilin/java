@@ -9,6 +9,15 @@ package com.liumulin.design.creational.simplefactory;
  * @author Daniel Liu 2019/9/12 11:54
  */
 public class VideoFactory {
+//    public Video getVideo(String type) {
+//        if ("java".equalsIgnoreCase(type)) {
+//            return new JavaVideo();
+//        } else if ("python".equalsIgnoreCase(type)) {
+//            return new PythonVideo();
+//        }
+//        return null;
+//    }
+
     public Video getVideo(Class type) {
         Video video = null;
         try {
@@ -18,14 +27,4 @@ public class VideoFactory {
         }
         return video;
     }
-/*
-    public Video getVideo(String type){
-        if ("java".equalsIgnoreCase(type)) {
-            return new JavaVideo();
-        } else if ("python".equalsIgnoreCase(type)) {
-            return new PythonVideo();
-        }
-        return null;
-    }
-*/
 }
