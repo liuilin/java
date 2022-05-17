@@ -7,6 +7,6 @@ public class JavaVideo extends Video {
 
     @Override
     public void produce() {
-        System.out.println("java视频");
+        System.out.println("录制 Java 视频");
     }
 }

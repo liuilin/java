@@ -9,7 +9,7 @@ public class VideoTest {
      * logger
      */
     public static void main(String[] args) {
-        VideoFactory factory = new FeVideoFactory();
+        VideoFactory factory = new PythonVideoFactory();
         Video video = factory.getVideo();
         video.produce();
     }
