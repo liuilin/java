@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.liumulin.design.creational.factorymethod</OriginalElement>
+  <nodes>
+    <node x="256.27708333333334" y="336.0">com.liumulin.design.creational.factorymethod.VideoTest</node>
+    <node x="214.49791666666664" y="0.0">com.liumulin.design.creational.factorymethod.Video</node>
+    <node x="0.0" y="118.0">com.liumulin.design.creational.factorymethod.PythonVideo</node>
+    <node x="173.27708333333334" y="118.0">com.liumulin.design.creational.factorymethod.VideoFactory</node>
+    <node x="47.91666666666663" y="228.0">com.liumulin.design.creational.factorymethod.PythonVideoFactory</node>
+    <node x="303.98541666666665" y="228.0">com.liumulin.design.creational.factorymethod.JavaVideoFactory</node>
+    <node x="339.27708333333334" y="118.0">com.liumulin.design.creational.factorymethod.JavaVideo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.liumulin.design.creational.factorymethod.JavaVideo" target="com.liumulin.design.creational.factorymethod.Video" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="405.77708333333334" y="97.0" />
+      <point x="242.49791666666664" y="97.0" />
+      <point x="242.49791666666664" y="77.0" />
+      <point x="247.74791666666664" y="77.0" />
+      <point x="-33.25" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.PythonVideoFactory" target="com.liumulin.design.creational.factorymethod.VideoFactory" relationship="GENERALIZATION">
+      <point x="65.33333333333331" y="-28.0" />
+      <point x="211.24999999999994" y="206.0" />
+      <point x="260.48541666666665" y="206.0" />
+      <point x="260.48541666666665" y="196.0" />
+      <point x="282.77708333333334" y="196.0" />
+      <point x="36.5" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.VideoTest" target="com.liumulin.design.creational.factorymethod.PythonVideoFactory" relationship="CREATE">
+      <point x="-38.75" y="-28.0" />
+      <point x="295.02708333333334" y="315.0" />
+      <point x="145.91666666666663" y="315.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.JavaVideoFactory" target="com.liumulin.design.creational.factorymethod.Video" relationship="DEPENDENCY">
+      <point x="59.0" y="-28.0" />
+      <point x="451.48541666666665" y="206.0" />
+      <point x="488.52708333333334" y="206.0" />
+      <point x="488.52708333333334" y="87.0" />
+      <point x="377.8875" y="87.0" />
+      <point x="377.8875" y="77.0" />
+      <point x="314.24791666666664" y="77.0" />
+      <point x="33.25" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.PythonVideo" target="com.liumulin.design.creational.factorymethod.Video" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="72.0" y="97.0" />
+      <point x="242.49791666666664" y="97.0" />
+      <point x="242.49791666666664" y="77.0" />
+      <point x="247.74791666666664" y="77.0" />
+      <point x="-33.25" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.VideoTest" target="com.liumulin.design.creational.factorymethod.Video" relationship="DEPENDENCY">
+      <point x="38.75" y="-28.0" />
+      <point x="372.52708333333334" y="315.0" />
+      <point x="388.02708333333334" y="315.0" />
+      <point x="388.02708333333334" y="305.0" />
+      <point x="513.2479166666667" y="305.0" />
+      <point x="513.2479166666667" y="87.0" />
+      <point x="377.8875" y="87.0" />
+      <point x="377.8875" y="77.0" />
+      <point x="314.24791666666664" y="77.0" />
+      <point x="33.25" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.PythonVideoFactory" target="com.liumulin.design.creational.factorymethod.Video" relationship="DEPENDENCY">
+      <point x="0.0" y="-28.0" />
+      <point x="145.91666666666663" y="206.0" />
+      <point x="154.5" y="206.0" />
+      <point x="154.5" y="87.0" />
+      <point x="377.8875" y="87.0" />
+      <point x="377.8875" y="77.0" />
+      <point x="314.24791666666664" y="77.0" />
+      <point x="33.25" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.VideoFactory" target="com.liumulin.design.creational.factorymethod.Video" relationship="DEPENDENCY">
+      <point x="0.0" y="-28.0" />
+      <point x="246.27708333333334" y="87.0" />
+      <point x="377.8875" y="87.0" />
+      <point x="377.8875" y="77.0" />
+      <point x="314.24791666666664" y="77.0" />
+      <point x="33.25" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.VideoTest" target="com.liumulin.design.creational.factorymethod.VideoFactory" relationship="DEPENDENCY">
+      <point x="38.75" y="-28.0" />
+      <point x="372.52708333333334" y="315.0" />
+      <point x="388.02708333333334" y="315.0" />
+      <point x="388.02708333333334" y="305.0" />
+      <point x="254.91666666666663" y="305.0" />
+      <point x="254.91666666666666" y="196.0" />
+      <point x="209.77708333333334" y="196.0" />
+      <point x="-36.5" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.JavaVideoFactory" target="com.liumulin.design.creational.factorymethod.JavaVideo" relationship="CREATE">
+      <point x="0.0" y="-28.0" />
+      <point x="392.48541666666665" y="206.0" />
+      <point x="405.77708333333334" y="206.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.PythonVideoFactory" target="com.liumulin.design.creational.factorymethod.PythonVideo" relationship="CREATE">
+      <point x="-65.33333333333331" y="-28.0" />
+      <point x="80.58333333333331" y="206.0" />
+      <point x="72.0" y="206.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.factorymethod.JavaVideoFactory" target="com.liumulin.design.creational.factorymethod.VideoFactory" relationship="GENERALIZATION">
+      <point x="-59.0" y="-28.0" />
+      <point x="333.48541666666665" y="206.0" />
+      <point x="260.48541666666665" y="206.0" />
+      <point x="260.48541666666665" y="196.0" />
+      <point x="282.77708333333334" y="196.0" />
+      <point x="36.5" y="28.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="257.0" y="196.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

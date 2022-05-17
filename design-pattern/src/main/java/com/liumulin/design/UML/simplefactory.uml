@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>//wsl$/Ubuntu-22.04/home/daniel/GitHub/java/design-pattern/src/main/java/com/liumulin/design/creational/simplefactory</OriginalElement>
+  <nodes>
+    <node x="164.0" y="82.0">com.liumulin.design.creational.simplefactory.JavaVideo</node>
+    <node x="166.0" y="164.0">com.liumulin.design.creational.simplefactory.VideoTest</node>
+    <node x="310.0" y="82.0">com.liumulin.design.creational.simplefactory.VideoFactory</node>
+    <node x="180.5" y="0.0">com.liumulin.design.creational.simplefactory.Video</node>
+    <node x="0.0" y="82.0">com.liumulin.design.creational.simplefactory.PythonVideo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.liumulin.design.creational.simplefactory.JavaVideo" target="com.liumulin.design.creational.simplefactory.Video" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="226.5" y="61.0" />
+      <point x="149.25" y="61.0" />
+      <point x="149.25" y="51.0" />
+      <point x="204.0" y="51.0" />
+      <point x="-23.5" y="15.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.simplefactory.VideoTest" target="com.liumulin.design.creational.simplefactory.Video" relationship="DEPENDENCY">
+      <point x="-30.75" y="-15.0" />
+      <point x="196.75" y="143.0" />
+      <point x="185.75" y="143.0" />
+      <point x="185.75" y="133.0" />
+      <point x="299.5" y="133.0" />
+      <point x="299.5" y="61.0" />
+      <point x="341.25" y="61.0" />
+      <point x="341.25" y="51.0" />
+      <point x="251.0" y="51.0" />
+      <point x="23.5" y="15.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.simplefactory.VideoFactory" target="com.liumulin.design.creational.simplefactory.Video" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="383.0" y="61.0" />
+      <point x="341.25" y="61.0" />
+      <point x="341.25" y="51.0" />
+      <point x="251.0" y="51.0" />
+      <point x="23.5" y="15.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.simplefactory.VideoTest" target="com.liumulin.design.creational.simplefactory.VideoFactory" relationship="CREATE">
+      <point x="30.75" y="-15.0" />
+      <point x="258.25" y="143.0" />
+      <point x="383.0" y="143.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.simplefactory.VideoTest" target="com.liumulin.design.creational.simplefactory.PythonVideo" relationship="DEPENDENCY">
+      <point x="-30.75" y="-15.0" />
+      <point x="196.75" y="143.0" />
+      <point x="185.75" y="143.0" />
+      <point x="185.75" y="133.0" />
+      <point x="72.0" y="133.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.liumulin.design.creational.simplefactory.PythonVideo" target="com.liumulin.design.creational.simplefactory.Video" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="72.0" y="61.0" />
+      <point x="149.25" y="61.0" />
+      <point x="149.25" y="51.0" />
+      <point x="204.0" y="51.0" />
+      <point x="-23.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="228.0" y="97.0" />
+  <SelectedNodes>
+    <node>com.liumulin.design.creational.simplefactory.VideoTest</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
