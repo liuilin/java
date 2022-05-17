@@ -12,7 +12,7 @@ public class VideoFactory {
     public Video getVideo(Class type) {
         Video video = null;
         try {
-            video = (Video) Class.forName(type.getName()).newInstance();
+            video = (Video) Class.forName(type.getName()).getDeclaredConstructor().newInstance();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -23,7 +23,7 @@ public class VideoFactory {
         if ("java".equalsIgnoreCase(type)) {
             return new JavaVideo();
         } else if ("python".equalsIgnoreCase(type)) {
-            return new PythonVedio();
+            return new PythonVideo();
         }
         return null;
     }

@@ -9,8 +9,8 @@ public class VideoFactoryTest {
     VideoFactory videoFactory = new VideoFactory();
 
     @Test
-    public void testGetVideo() throws Exception {
-        Video result = videoFactory.getVideo(JavaVideo.class);
+    public void testGetVideo() {
+        Video result = videoFactory.getVideo(PythonVideo.class);
         if (result == null) {
             return;
         }

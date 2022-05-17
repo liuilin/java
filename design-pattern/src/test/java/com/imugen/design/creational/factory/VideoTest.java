@@ -1,6 +1,9 @@
 package com.imugen.design.creational.factory;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 如果说new JavaVideo的话意味着不同包下需要导包，太依赖这个类了
  *
@@ -14,6 +17,7 @@ public class VideoTest {
         VideoFactory factory = new FeVideoFactory();
         Video video = factory.getVideo();
         video.produce();
+
     }
 
 /*
@@ -21,7 +25,7 @@ public class VideoTest {
 //        Video video = new JavaVideo();
         VideoFactory videoFactory = new VideoFactory();
 //        Video video = videoFactory.getVideo("python");
-        Video video = videoFactory.getVideo(PythonVedio.class);
+        Video video = videoFactory.getVideo(PythonVideo.class);
         if (video == null) {
             return;
         }
