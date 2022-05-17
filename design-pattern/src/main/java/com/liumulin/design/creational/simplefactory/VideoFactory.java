@@ -1,5 +1,8 @@
 package com.liumulin.design.creational.simplefactory;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * 简单工厂缺点：添加别的Video种类的时候需要修改Factory类，存在风险，违背了开闭原则
  * 可以通过反射来弥补不足
@@ -9,7 +12,7 @@ package com.liumulin.design.creational.simplefactory;
  * @author Daniel Liu 2019/9/12 11:54
  */
 public class VideoFactory {
-//    public Video getVideo(String type) {
+    //    public Video getVideo(String type) {
 //        if ("java".equalsIgnoreCase(type)) {
 //            return new JavaVideo();
 //        } else if ("python".equalsIgnoreCase(type)) {
@@ -17,11 +20,14 @@ public class VideoFactory {
 //        }
 //        return null;
 //    }
+    private static final Logger LOGGER = LoggerFactory.getLogger(VideoFactory.class);
 
     public Video getVideo(Class type) {
         Video video = null;
         try {
-            video = (Video) Class.forName(type.getName()).getDeclaredConstructor().newInstance();
+            // 强转为父类
+//            video = (Video) Class.forName(type.getName()).getDeclaredConstructor().newInstance();
+            video = (Video) type.getDeclaredConstructor().newInstance();
         } catch (Exception e) {
             e.printStackTrace();
         }
