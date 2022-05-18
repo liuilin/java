@@ -31,15 +31,18 @@ public class PrizeController {
                     awardRes = new AwardRes("0001", couponResult.getInfo());
                 }
             } else if (req.getAwardType() == 2) {
+                PhysicalGoods goods = (PhysicalGoods) req;
+
+
                 GoodsService goodsService = new GoodsService();
                 DeliverReq deliverReq = new DeliverReq();
                 deliverReq.setUserName(queryUserName(req.getUserId()));
                 deliverReq.setUserPhone(queryUserPhoneNumber(req.getUserId()));
-                deliverReq.setSku(req.getAwardNumber());
-                deliverReq.setOrderId(req.getBizId());
-                deliverReq.setConsigneeUserName(req.getExtMap().get("consigneeUserName"));
-                deliverReq.setConsigneeUserPhone(req.getExtMap().get("consigneeUserPhone"));
-                deliverReq.setConsigneeUserAddress(req.getExtMap().get("consigneeUserAddress"));
+                deliverReq.setSku(goods.getAwardNumber());
+                deliverReq.setOrderId(goods.getBizId());
+                deliverReq.setConsigneeUserName(goods.getConsigneeUserName());
+                deliverReq.setConsigneeUserPhone(goods.getConsigneeUserPhone());
+                deliverReq.setConsigneeUserAddress(goods.getConsigneeUserAddress());
                 Boolean isSuccess = goodsService.deliverGoods(deliverReq);
                 if (isSuccess) {
                     awardRes = new AwardRes("0000", "发放成功");
