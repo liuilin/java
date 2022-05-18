@@ -15,6 +15,7 @@ public class CardCommodityService implements ICommodity {
     // 模拟注入
     private IQiYiCardService iQiYiCardService = new IQiYiCardService();
 
+    @Override
     public void sendCommodity(String uId, String commodityId, String bizId, Map<String, String> extMap) throws Exception {
         String mobile = queryUserMobile(uId);
         iQiYiCardService.grantToken(mobile, bizId);

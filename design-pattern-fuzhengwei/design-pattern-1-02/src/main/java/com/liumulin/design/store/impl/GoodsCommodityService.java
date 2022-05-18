@@ -15,6 +15,7 @@ public class GoodsCommodityService implements ICommodity {
 
     private GoodsService goodsService = new GoodsService();
 
+    @Override
     public void sendCommodity(String uId, String commodityId, String bizId, Map<String, String> extMap) throws Exception {
         DeliverReq deliverReq = new DeliverReq();
         deliverReq.setUserName(queryUserName(uId));
