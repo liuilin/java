@@ -1,8 +1,8 @@
 package org.itstack.demo.test;
 
 import com.alibaba.fastjson.JSON;
-import com.liumulin.design.AwardReq;
-import com.liumulin.design.AwardRes;
+import com.liumulin.design.PrizeReq;
+import com.liumulin.design.PrizeRes;
 import com.liumulin.design.PhysicalGoods;
 import com.liumulin.design.PrizeController;
 import org.junit.Test;
@@ -24,14 +24,14 @@ public class ApiTest {
 
     private void iQiYi(PrizeController prizeController) {
         System.out.println("\r\n第三方兑换卡(爱奇艺)\r\n");
-        AwardReq req03 = new AwardReq();
+        PrizeReq req03 = new PrizeReq();
         req03.setUserId("10001");
         req03.setAwardType(3);
         req03.setAwardNumber("AQY1xjkUodl8LO975GdfrYUio");
 
-        AwardRes awardRes03 = prizeController.awardToUser(req03);
+        PrizeRes prizeRes03 = prizeController.awardToUser(req03);
         logger.info("请求参数：{}", JSON.toJSON(req03));
-        logger.info("测试结果：{}", JSON.toJSON(awardRes03));
+        logger.info("测试结果：{}", JSON.toJSON(prizeRes03));
     }
 
     private void physicalGoods(PrizeController prizeController) {
@@ -47,23 +47,23 @@ public class ApiTest {
         req02.setConsigneeUserPhone("19121945219");
         req02.setConsigneeUserAddress("四川省成都市温江区富和苑");
 
-        AwardRes awardRes02 = prizeController.awardToUser(req02);
+        PrizeRes prizeRes02 = prizeController.awardToUser(req02);
         logger.info("请求参数：{}", JSON.toJSON(req02));
-        logger.info("测试结果：{}", JSON.toJSON(awardRes02));
+        logger.info("测试结果：{}", JSON.toJSON(prizeRes02));
     }
 
     private void discountCoupon(PrizeController prizeController) {
         System.out.println("\r\n模拟发放优惠券测试\r\n");
         // 模拟发放优惠券测试
-        AwardReq req01 = new AwardReq();
+        PrizeReq req01 = new PrizeReq();
         req01.setUserId("10001");
         req01.setAwardType(1);
         req01.setAwardNumber("EGM1023938910232121323432");
         req01.setBizId("791098764902132");
-        AwardRes awardRes01 = prizeController.awardToUser(req01);
+        PrizeRes prizeRes01 = prizeController.awardToUser(req01);
 
         logger.info("请求参数：{}", JSON.toJSON(req01));
-        logger.info("测试结果：{}", JSON.toJSON(awardRes01));
+        logger.info("测试结果：{}", JSON.toJSON(prizeRes01));
     }
 
 }

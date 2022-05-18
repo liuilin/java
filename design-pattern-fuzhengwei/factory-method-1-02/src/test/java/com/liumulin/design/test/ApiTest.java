@@ -1,39 +1,40 @@
 package com.liumulin.design.test;
 
+import com.liumulin.design.PhysicalGoods;
+import com.liumulin.design.PrizeReq;
 import com.liumulin.design.StoreFactory;
-import com.liumulin.design.store.ICommodity;
+import com.liumulin.design.store.IGoods;
 import org.junit.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class ApiTest {
 
     @Test
-    public void test_commodity() throws Exception {
+    public void whenGoodsType_thenSendPrize() {
         StoreFactory storeFactory = new StoreFactory();
 
         // 1. 优惠券
-        ICommodity commodityService_1 = storeFactory.getCommodityService(1);
-        commodityService_1.sendCommodity("10001", "EGM1023938910232121323432", "791098764902132", null);
+        IGoods commodityService_1 = storeFactory.getCommodityService(1);
+        commodityService_1.sendPrize(PrizeReq.builder().userId("10001").id("EGM1023938910232121323432").bizId("791098764902132").build());
 
         // 2. 实物商品
-        ICommodity commodityService_2 = storeFactory.getCommodityService(2);
-        Map<String,String> extMap = new HashMap<String,String>();
-        extMap.put("consigneeUserName", "谢飞机");
-        extMap.put("consigneeUserPhone", "15200292123");
-        extMap.put("consigneeUserAddress", "吉林省.长春市.双阳区.XX街道.檀溪苑小区.#18-2109");
+        IGoods commodityService_2 = storeFactory.getCommodityService(2);
 
-        commodityService_2.sendCommodity("10001","9820198721311","1023000020112221113",new HashMap<String, String>() {{
-            put("consigneeUserName", "谢飞机");
-            put("consigneeUserPhone", "15200292123");
-            put("consigneeUserAddress", "吉林省.长春市.双阳区.XX街道.檀溪苑小区.#18-2109");
-        }});
+        commodityService_2.sendPrize(
+                PhysicalGoods.builder()
+                        .consigneeUserName("Daniel")
+                        .consigneeUserPhone("19121945219")
+                        .consigneeUserAddress("四川省成都市温江区富和苑")
+
+                        // 奖品共有属性
+                        .userId("10001")
+                        .id("9820198721311")
+                        .bizId("1023000020112221113")
+                        .build()
+        );
 
         // 3. 第三方兑换卡(爱奇艺)
-        ICommodity commodityService_3 = storeFactory.getCommodityService(3);
-        commodityService_3.sendCommodity("10001","AQY1xjkUodl8LO975GdfrYUio",null,null);
-
+        IGoods commodityService_3 = storeFactory.getCommodityService(3);
+        commodityService_3.sendPrize(PrizeReq.builder().userId("10001").id("AQY1xjkUodl8LO975GdfrYUio").build());
     }
 
 }
