@@ -14,15 +14,15 @@ public class ApiTest {
         StoreFactory storeFactory = new StoreFactory();
 
         // 1. 第三方兑换卡(爱奇艺)
-        IPrize cardService = storeFactory.getPrizeService(PrizeTypeEnum.CARD);
+        IPrize cardService = storeFactory.getPrizeService(1);
         cardService.sendPrize(PrizeReq.builder().userId("10001").id("AQY1xjkUodl8LO975GdfrYUio").build());
 
         // 2. 优惠券
-        IPrize couponService = storeFactory.getPrizeService(PrizeTypeEnum.COUPON);
+        IPrize couponService = storeFactory.getPrizeService(2);
         couponService.sendPrize(PrizeReq.builder().userId("10001").id("EGM1023938910232121323432").bizId("791098764902132").build());
 
         // 3. 实物商品
-        IPrize physicalGoodsService = storeFactory.getPrizeService(PrizeTypeEnum.PHYSICAL_GOODS);
+        IPrize physicalGoodsService = storeFactory.getPrizeService(3);
         physicalGoodsService.sendPrize(
                 PhysicalGoods.builder()
                         .consigneeUserName("Daniel")

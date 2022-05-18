@@ -8,11 +8,11 @@ import com.liumulin.design.store.impl.PhysicalGoodsPrizeService;
 
 public class StoreFactory {
 
-    public IPrize getPrizeService(PrizeTypeEnum prizeType) {
+    public IPrize getPrizeService(Integer prizeType) {
         if (null == prizeType) return null;
-        if (PrizeTypeEnum.CARD == prizeType) return new CardPrizeService();
-        if (PrizeTypeEnum.COUPON == prizeType) return new CouponPrizeService();
-        if (PrizeTypeEnum.PHYSICAL_GOODS == prizeType) return new PhysicalGoodsPrizeService();
+        if (PrizeTypeEnum.CARD.getCode() == prizeType) return new CardPrizeService();
+        if (PrizeTypeEnum.COUPON.getCode() == prizeType) return new CouponPrizeService();
+        if (PrizeTypeEnum.PHYSICAL_GOODS.getCode() == prizeType) return new PhysicalGoodsPrizeService();
         throw new RuntimeException("不存在的奖品类型");
     }
 
