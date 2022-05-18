@@ -1,18 +1,19 @@
 package com.liumulin.design;
 
-import com.liumulin.design.store.IGoods;
-import com.liumulin.design.store.impl.CardGoodsService;
-import com.liumulin.design.store.impl.CouponGoodsService;
-import com.liumulin.design.store.impl.PhysicalGoodsService;
+import com.liumulin.design.store.IPrize;
+import com.liumulin.design.store.PrizeTypeEnum;
+import com.liumulin.design.store.impl.CardPrizeService;
+import com.liumulin.design.store.impl.CouponPrizeService;
+import com.liumulin.design.store.impl.PhysicalGoodsPrizeService;
 
 public class StoreFactory {
 
-    public IGoods getCommodityService(Integer commodityType) {
-        if (null == commodityType) return null;
-        if (1 == commodityType) return new CouponGoodsService();
-        if (2 == commodityType) return new PhysicalGoodsService();
-        if (3 == commodityType) return new CardGoodsService();
-        throw new RuntimeException("不存在的商品服务类型");
+    public IPrize getPrizeService(PrizeTypeEnum prizeType) {
+        if (null == prizeType) return null;
+        if (PrizeTypeEnum.CARD == prizeType) return new CouponPrizeService();
+        if (PrizeTypeEnum.COUPON == prizeType) return new PhysicalGoodsPrizeService();
+        if (PrizeTypeEnum.PHYSICAL_GOODS == prizeType) return new CardPrizeService();
+        throw new RuntimeException("不存在的奖品类型");
     }
 
 }

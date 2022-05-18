@@ -3,7 +3,8 @@ package com.liumulin.design.test;
 import com.liumulin.design.PhysicalGoods;
 import com.liumulin.design.PrizeReq;
 import com.liumulin.design.StoreFactory;
-import com.liumulin.design.store.IGoods;
+import com.liumulin.design.store.IPrize;
+import com.liumulin.design.store.PrizeTypeEnum;
 import org.junit.Test;
 
 public class ApiTest {
@@ -13,11 +14,11 @@ public class ApiTest {
         StoreFactory storeFactory = new StoreFactory();
 
         // 1. 优惠券
-        IGoods commodityService_1 = storeFactory.getCommodityService(1);
+        IPrize commodityService_1 = storeFactory.getPrizeService(PrizeTypeEnum.CARD);
         commodityService_1.sendPrize(PrizeReq.builder().userId("10001").id("EGM1023938910232121323432").bizId("791098764902132").build());
 
         // 2. 实物商品
-        IGoods commodityService_2 = storeFactory.getCommodityService(2);
+        IPrize commodityService_2 = storeFactory.getPrizeService(PrizeTypeEnum.COUPON);
 
         commodityService_2.sendPrize(
                 PhysicalGoods.builder()
@@ -33,7 +34,7 @@ public class ApiTest {
         );
 
         // 3. 第三方兑换卡(爱奇艺)
-        IGoods commodityService_3 = storeFactory.getCommodityService(3);
+        IPrize commodityService_3 = storeFactory.getPrizeService(PrizeTypeEnum.PHYSICAL_GOODS);
         commodityService_3.sendPrize(PrizeReq.builder().userId("10001").id("AQY1xjkUodl8LO975GdfrYUio").build());
     }
 

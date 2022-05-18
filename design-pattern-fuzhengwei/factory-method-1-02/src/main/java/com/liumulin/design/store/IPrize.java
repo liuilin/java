@@ -2,7 +2,7 @@ package com.liumulin.design.store;
 
 import com.liumulin.design.PrizeReq;
 
-public interface IGoods {
+public interface IPrize {
 
     /**
      * 发送奖品

@@ -4,13 +4,13 @@ import com.liumulin.design.PhysicalGoods;
 import com.liumulin.design.PrizeReq;
 import com.liumulin.design.goods.DeliverReq;
 import com.liumulin.design.goods.GoodsService;
-import com.liumulin.design.store.IGoods;
+import com.liumulin.design.store.IPrize;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PhysicalGoodsService implements IGoods {
+public class PhysicalGoodsPrizeService implements IPrize {
 
-    private final Logger logger = LoggerFactory.getLogger(PhysicalGoodsService.class);
+    private final Logger logger = LoggerFactory.getLogger(PhysicalGoodsPrizeService.class);
 
     private final GoodsService goodsService = new GoodsService();
 

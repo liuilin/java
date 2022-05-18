@@ -2,13 +2,13 @@ package com.liumulin.design.store.impl;
 
 import com.liumulin.design.PrizeReq;
 import com.liumulin.design.card.IQiYiCardService;
-import com.liumulin.design.store.IGoods;
+import com.liumulin.design.store.IPrize;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CardGoodsService implements IGoods {
+public class CardPrizeService implements IPrize {
 
-    private final Logger logger = LoggerFactory.getLogger(CardGoodsService.class);
+    private final Logger logger = LoggerFactory.getLogger(CardPrizeService.class);
 
     // 模拟注入
     private final IQiYiCardService iQiYiCardService = new IQiYiCardService();

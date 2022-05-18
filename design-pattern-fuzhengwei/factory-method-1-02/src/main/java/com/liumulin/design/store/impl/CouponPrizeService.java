@@ -4,15 +4,13 @@ import com.alibaba.fastjson.JSON;
 import com.liumulin.design.PrizeReq;
 import com.liumulin.design.coupon.CouponResult;
 import com.liumulin.design.coupon.CouponService;
-import com.liumulin.design.store.IGoods;
+import com.liumulin.design.store.IPrize;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Map;
+public class CouponPrizeService implements IPrize {
 
-public class CouponGoodsService implements IGoods {
-
-    private final Logger logger = LoggerFactory.getLogger(CouponGoodsService.class);
+    private final Logger logger = LoggerFactory.getLogger(CouponPrizeService.class);
 
     private final CouponService couponService = new CouponService();
 
