@@ -33,8 +33,8 @@ public class PhysicalGoodsPrizeService implements IPrize {
 
         Boolean isSuccess = goodsService.deliverGoods(deliverReq);
 
-        logger.info("请求参数[优惠券] => userId：{} goodsId：{} bizId：{} ", userId, goodsId, bizId);
-        logger.info("测试结果[优惠券]：{}", isSuccess);
+        logger.info("请求参数[实物商品] => userId：{} goodsId：{} bizId：{} ", userId, goodsId, bizId);
+        logger.info("测试结果[实物商品]：{}", isSuccess);
 
         if (!isSuccess) throw new RuntimeException("实物商品发放失败");
 

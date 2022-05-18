@@ -13,14 +13,17 @@ public class ApiTest {
     public void whenGoodsType_thenSendPrize() {
         StoreFactory storeFactory = new StoreFactory();
 
-        // 1. 优惠券
-        IPrize commodityService_1 = storeFactory.getPrizeService(PrizeTypeEnum.CARD);
-        commodityService_1.sendPrize(PrizeReq.builder().userId("10001").id("EGM1023938910232121323432").bizId("791098764902132").build());
+        // 1. 第三方兑换卡(爱奇艺)
+        IPrize cardService = storeFactory.getPrizeService(PrizeTypeEnum.CARD);
+        cardService.sendPrize(PrizeReq.builder().userId("10001").id("AQY1xjkUodl8LO975GdfrYUio").build());
 
-        // 2. 实物商品
-        IPrize commodityService_2 = storeFactory.getPrizeService(PrizeTypeEnum.COUPON);
+        // 2. 优惠券
+        IPrize couponService = storeFactory.getPrizeService(PrizeTypeEnum.COUPON);
+        couponService.sendPrize(PrizeReq.builder().userId("10001").id("EGM1023938910232121323432").bizId("791098764902132").build());
 
-        commodityService_2.sendPrize(
+        // 3. 实物商品
+        IPrize physicalGoodsService = storeFactory.getPrizeService(PrizeTypeEnum.PHYSICAL_GOODS);
+        physicalGoodsService.sendPrize(
                 PhysicalGoods.builder()
                         .consigneeUserName("Daniel")
                         .consigneeUserPhone("19121945219")
@@ -33,9 +36,6 @@ public class ApiTest {
                         .build()
         );
 
-        // 3. 第三方兑换卡(爱奇艺)
-        IPrize commodityService_3 = storeFactory.getPrizeService(PrizeTypeEnum.PHYSICAL_GOODS);
-        commodityService_3.sendPrize(PrizeReq.builder().userId("10001").id("AQY1xjkUodl8LO975GdfrYUio").build());
     }
 
 }

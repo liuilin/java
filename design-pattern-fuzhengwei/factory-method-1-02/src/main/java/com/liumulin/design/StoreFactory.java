@@ -10,9 +10,9 @@ public class StoreFactory {
 
     public IPrize getPrizeService(PrizeTypeEnum prizeType) {
         if (null == prizeType) return null;
-        if (PrizeTypeEnum.CARD == prizeType) return new CouponPrizeService();
-        if (PrizeTypeEnum.COUPON == prizeType) return new PhysicalGoodsPrizeService();
-        if (PrizeTypeEnum.PHYSICAL_GOODS == prizeType) return new CardPrizeService();
+        if (PrizeTypeEnum.CARD == prizeType) return new CardPrizeService();
+        if (PrizeTypeEnum.COUPON == prizeType) return new CouponPrizeService();
+        if (PrizeTypeEnum.PHYSICAL_GOODS == prizeType) return new PhysicalGoodsPrizeService();
         throw new RuntimeException("不存在的奖品类型");
     }
 
