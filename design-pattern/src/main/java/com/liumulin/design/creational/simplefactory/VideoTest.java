@@ -20,11 +20,24 @@ public class VideoTest {
 //        video.produce();
 
         VideoFactory videoFactory = new VideoFactory();
-        Video video = videoFactory.getVideo(JavaVideo.class);
+
+//        Video video = videoFactory.getVideo(getClassByType(1));
+        Video video = videoFactory.getVideo(PythonVideo.class);
         if (video == null) {
             return;
         }
         video.produce();
     }
+
+//    private static Class getClassByType(int type) {
+//        switch (type) {
+//            case 1:
+//                return JavaVideo.class;
+//            case 2:
+//                return PythonVideo.class;
+//            default:
+//                return null;
+//        }
+//    }
 
 }

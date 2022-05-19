@@ -20,7 +20,6 @@ public class VideoFactory {
 //        }
 //        return null;
 //    }
-    private static final Logger LOGGER = LoggerFactory.getLogger(VideoFactory.class);
 
     public Video getVideo(Class type) {
         Video video = null;
