@@ -18,9 +18,9 @@
     </properties>
 
     <modules>
-        <module>design-pattern-1-00</module>
-        <module>design-pattern-1-01</module>
-        <module>design-pattern-1-02</module>
+        <module>factory-method-1-00</module>
+        <module>factory-method-1-01</module>
+        <module>factory-method-1-02</module>
 <!--        <module>itstack-demo-design-2-00</module>-->
 <!--        <module>itstack-demo-design-2-01</module>-->
 <!--        <module>itstack-demo-design-2-02</module>-->
