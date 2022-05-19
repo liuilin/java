@@ -3,6 +3,7 @@ package com.liumulin.design.store.impl;
 import com.liumulin.design.PrizeReq;
 import com.liumulin.design.card.IQiYiCardService;
 import com.liumulin.design.store.IPrize;
+import com.liumulin.design.store.PrizeTypeEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,11 @@ public class CardPrizeService implements IPrize {
         iQiYiCardService.grantToken(mobile, bizId);
         logger.info("请求参数[爱奇艺兑换卡] => uId：{} commodityId：{} bizId：{} ", userId, prizeReq.getId(), bizId);
         logger.info("测试结果[爱奇艺兑换卡]：success");
+    }
+
+    @Override
+    public Integer getPrizeType() {
+        return PrizeTypeEnum.CARD.getCode();
     }
 
     private String queryUserMobile(String userId) {

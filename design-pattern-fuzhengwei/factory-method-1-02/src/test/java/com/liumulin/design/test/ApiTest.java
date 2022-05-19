@@ -1,28 +1,30 @@
 package com.liumulin.design.test;
 
 import com.liumulin.design.PhysicalGoods;
+import com.liumulin.design.PrizeFactory;
 import com.liumulin.design.PrizeReq;
-import com.liumulin.design.StoreFactory;
 import com.liumulin.design.store.IPrize;
-import com.liumulin.design.store.PrizeTypeEnum;
 import org.junit.Test;
 
 public class ApiTest {
 
     @Test
     public void whenGoodsType_thenSendPrize() {
-        StoreFactory storeFactory = new StoreFactory();
+        PrizeFactory prizeFactory = new PrizeFactory();
 
         // 1. 第三方兑换卡(爱奇艺)
-        IPrize cardService = storeFactory.getPrizeService(1);
+        IPrize cardService = prizeFactory.getPrizeService(1);
+//        IPrize cardService = PrizeFactory.getInstance().getPrize(1);
         cardService.sendPrize(PrizeReq.builder().userId("10001").id("AQY1xjkUodl8LO975GdfrYUio").build());
 
         // 2. 优惠券
-        IPrize couponService = storeFactory.getPrizeService(2);
+        IPrize couponService = prizeFactory.getPrizeService(2);
+//        IPrize couponService = PrizeFactory.getPrize(2);
         couponService.sendPrize(PrizeReq.builder().userId("10001").id("EGM1023938910232121323432").bizId("791098764902132").build());
 
         // 3. 实物商品
-        IPrize physicalGoodsService = storeFactory.getPrizeService(3);
+        IPrize physicalGoodsService = prizeFactory.getPrizeService(3);
+//        IPrize physicalGoodsService = PrizeFactory.getPrize(3);
         physicalGoodsService.sendPrize(
                 PhysicalGoods.builder()
                         .consigneeUserName("Daniel")

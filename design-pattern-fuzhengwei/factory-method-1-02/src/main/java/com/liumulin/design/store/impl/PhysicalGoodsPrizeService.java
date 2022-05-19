@@ -5,6 +5,7 @@ import com.liumulin.design.PrizeReq;
 import com.liumulin.design.goods.DeliverReq;
 import com.liumulin.design.goods.GoodsService;
 import com.liumulin.design.store.IPrize;
+import com.liumulin.design.store.PrizeTypeEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,6 +39,11 @@ public class PhysicalGoodsPrizeService implements IPrize {
 
         if (!isSuccess) throw new RuntimeException("实物商品发放失败");
 
+    }
+
+    @Override
+    public Integer getPrizeType() {
+        return PrizeTypeEnum.PHYSICAL_GOODS.getCode();
     }
 
     private String queryUserName(String userId) {
