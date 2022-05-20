@@ -6,7 +6,7 @@ package com.liumulin.design.creational.factorymethod2;
  */
 public class LogisticsTest {
     public static void main(String[] args) {
-        Logistics logistics = new SeaLogistics();
+        Logistics logistics = new AirLogistics();
         Transport transport = logistics.createTransport();
         transport.deliver();
     }

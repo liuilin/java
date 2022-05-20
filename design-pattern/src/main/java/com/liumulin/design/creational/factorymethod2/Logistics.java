@@ -12,10 +12,6 @@ import lombok.NoArgsConstructor;
  * @author liuqiang
  * @since 2022-05-20
  */
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public abstract class Logistics {
     public abstract Transport createTransport();
 }

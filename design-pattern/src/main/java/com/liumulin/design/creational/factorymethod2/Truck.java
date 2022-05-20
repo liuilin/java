@@ -1,18 +1,11 @@
 package com.liumulin.design.creational.factorymethod2;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 /**
+ * 卡车
+ *
  * @author liuqiang
  * @since 2022-05-20
  */
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Truck implements Transport {
     @Override
     public void deliver() {
