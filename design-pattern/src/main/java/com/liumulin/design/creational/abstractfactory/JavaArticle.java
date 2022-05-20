@@ -6,6 +6,6 @@ package com.liumulin.design.creational.abstractfactory;
 public class JavaArticle extends Article {
     @Override
     void produce() {
-        System.out.println("java diary");
+        System.out.println("java article");
     }
 }

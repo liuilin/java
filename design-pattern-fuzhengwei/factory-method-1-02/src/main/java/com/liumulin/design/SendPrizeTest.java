@@ -8,6 +8,7 @@ package com.liumulin.design;
  */
 public class SendPrizeTest {
     public static void main(String[] args) {
+//        Prize prize = new CardPrize();
         Prize prize = new PhysicalGoodsPrize();
         Award award = prize.createAward();
         // 第三方兑换卡

@@ -4,7 +4,7 @@ package com.liumulin.design.creational.abstractfactory;
  * @author Daniel Liu 2019/9/21 17:46
  */
 public class JavaCourseFacTest {
-    CourseFactory courseFactory = new FeCourseFac();
+    CourseFactory courseFactory = new PythonCourseFactory();
 
     //    @Test
     public void testGetVideo() throws Exception {
