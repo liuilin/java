@@ -3,7 +3,6 @@ package com.liumulin.design.structural;
 import com.liumulin.design.structural.proxy.IOrderService;
 import com.liumulin.design.structural.proxy.Order;
 import com.liumulin.design.structural.proxy.OrderServiceImpl;
-import org.junit.Test;
 
 /**
  * @author Daniel Liu 2019/9/22 11:36
@@ -11,7 +10,7 @@ import org.junit.Test;
 public class OrderServiceImplTest {
     private IOrderService iOrderService;
 
-    @Test
+    //    @Test
     public void saveOrder() {
         iOrderService = new OrderServiceImpl();
         Order o = new Order();

@@ -12,7 +12,6 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
     }
 
 
-
 //    <bean id="db0" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 //        <property name="driverClassName" value="${db.driverClassName}"/>
 //        <property name="url" value="${db.url}"/>
@@ -45,7 +44,6 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
 //        <!--# 检查连接有效性的SQL语句-->
 //        <property name="validationQuery" value="SELECT 1 FROM dual"/>
 //    </bean>
-
 
 
 //    <bean id="db1" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
