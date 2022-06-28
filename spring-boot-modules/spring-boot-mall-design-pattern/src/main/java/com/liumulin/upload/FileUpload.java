@@ -1,12 +1,6 @@
 package com.liumulin.upload;
 
-import io.minio.errors.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.File;
-import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * 文件上传接口

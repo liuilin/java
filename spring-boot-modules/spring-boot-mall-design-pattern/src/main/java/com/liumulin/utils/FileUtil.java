@@ -1,8 +1,5 @@
 package com.liumulin.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FileUtil {
 
@@ -32,14 +31,16 @@ public class FileUtil {
     }
 
     public static boolean isPicture(String contentType) {
-        if (contentType == null)
+        if (contentType == null) {
             return false;
+        }
         return contentType.contains("image");
     }
 
     public static boolean isDoc(String contentType) {
-        if (contentType == null)
+        if (contentType == null) {
             return false;
+        }
         return contentType.contains("document") || contentType.contains("vnd.openxml");
     }
 

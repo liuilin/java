@@ -1,9 +1,8 @@
 package com.baeldung.startup;
 
-import org.springframework.stereotype.Component;
-
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
+import org.springframework.stereotype.Component;
 
 @Component
 public class ResourceInitializer {

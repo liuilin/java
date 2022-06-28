@@ -1,22 +1,21 @@
 package com.baeldung.metrics;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.awaitility.Awaitility.await;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
+
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.ActiveProfiles;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.awaitility.Awaitility.await;
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
-
 @SpringBootTest(
-  classes = MetricsApplication.class,
-  webEnvironment = RANDOM_PORT,
-  properties = {"fixedDelay.in.milliseconds=2000"}
+        classes = MetricsApplication.class,
+        webEnvironment = RANDOM_PORT,
+        properties = {"fixedDelay.in.milliseconds=2000"}
 )
 @ActiveProfiles("metrics")
 class MetricsApplicationIntegrationTest {

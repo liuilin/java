@@ -4,7 +4,7 @@ server:
 upload:
   filemap:
     # 上传到七牛云的文件类型
-#    qiniu: mp4,avi
+    #    qiniu: mp4,avi
     aliyun: mp4,avi
     # 上传到本地 MinIO 的文件类型
     minioFileUpload: png,jpg

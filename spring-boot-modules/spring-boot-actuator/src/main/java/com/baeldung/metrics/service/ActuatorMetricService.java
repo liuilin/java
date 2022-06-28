@@ -3,14 +3,13 @@ package com.baeldung.metrics.service;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.Meter;
 import io.micrometer.core.instrument.MeterRegistry;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
 
 @Service
 public class ActuatorMetricService implements MetricService {
@@ -92,7 +91,7 @@ public class ActuatorMetricService implements MetricService {
             appendStatusIfNotExist(status, statusCount);
             int index = statusList.indexOf(status);
             int oldCount = statusCount.get(index) == null ? 0 : statusCount.get(index);
-            statusCount.set(index, (int)((Counter) counterMetric).count() + oldCount);
+            statusCount.set(index, (int) ((Counter) counterMetric).count() + oldCount);
         }
     }
 

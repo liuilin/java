@@ -1,16 +1,16 @@
 package com.baeldung.startup;
 
+import static java.lang.Boolean.FALSE;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
 
-import static java.lang.Boolean.FALSE;
-
 @SpringBootApplication(exclude = {
-  SecurityAutoConfiguration.class,
-  ManagementWebSecurityAutoConfiguration.class}
+        SecurityAutoConfiguration.class,
+        ManagementWebSecurityAutoConfiguration.class}
 )
 public class StartupTrackingApplication {
 
@@ -31,7 +31,7 @@ public class StartupTrackingApplication {
 
     private static boolean shouldFilterSteps() {
         return Boolean.parseBoolean(
-          System.getProperty("startup.steps.filter", FALSE.toString())
+                System.getProperty("startup.steps.filter", FALSE.toString())
         );
     }
 

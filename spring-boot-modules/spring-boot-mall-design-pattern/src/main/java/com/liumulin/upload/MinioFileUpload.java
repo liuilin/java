@@ -2,20 +2,11 @@ package com.liumulin.upload;
 
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
-import io.minio.RemoveObjectArgs;
-import io.minio.errors.*;
+import java.util.UUID;
+import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-
-import javax.annotation.Resource;
-import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.UUID;
 
 @Component(value = "minioFileUpload")
 //@Component("minio")
@@ -57,7 +48,7 @@ public class MinioFileUpload implements FileUpload {
 //    }
 
     @Override
-    public String upload(MultipartFile file) throws Exception{
+    public String upload(MultipartFile file) throws Exception {
         // 上传
         String path = UUID.randomUUID().toString(); // 文件名，使用 UUID 随机
         minioClient.putObject(PutObjectArgs.builder()
