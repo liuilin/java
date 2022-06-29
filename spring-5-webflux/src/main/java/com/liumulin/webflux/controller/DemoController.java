@@ -16,7 +16,6 @@ import reactor.core.publisher.Mono;
 public class DemoController {
 
     public static void main(String[] args) {
-//        System.out.println("args = " + 1);
 //        List<String> it = Arrays.asList("1", "2");
 
 //        Flux<Long> intervalFlux = Flux.interval(Duration.ofMillis(100));
