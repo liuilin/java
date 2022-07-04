@@ -20,6 +20,7 @@ public class DemoController {
 
 //        Flux<Long> intervalFlux = Flux.interval(Duration.ofMillis(100));
 //        intervalFlux.subscribe(System.out::println);
+
         fluxRange();
 
         Supplier<Double> nextDouble = new Random()::nextDouble;
