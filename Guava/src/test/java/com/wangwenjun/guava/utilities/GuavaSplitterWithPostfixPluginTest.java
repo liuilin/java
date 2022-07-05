@@ -1,0 +1,48 @@
+package com.wangwenjun.guava.utilities;
+
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.notNullValue;
+import static org.junit.Assert.assertThat;
+
+import com.google.common.base.Splitter;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.Assert;
+import org.junit.Test;
+
+/**
+ * Guava 工具类测试
+ *
+ * @author liuqiang
+ * @date 2022/07/05
+ */
+public class GuavaSplitterWithPostfixPluginTest {
+
+    public static final String STR = "四川省/成都市";
+
+    // ================================ split to array/list ================================
+
+    @Test
+    public void testSplit() {
+        String[] split = STR.split("/");
+        List<String> strings = Arrays.asList(split);
+        Assert.assertEquals(2, strings.size());
+        Assert.assertEquals("四川省", strings.get(0));
+        Assert.assertEquals("成都市", strings.get(1));
+    }
+
+    @Test
+    public void testSplitByRegexp(){
+        List<String> result = Splitter.onPattern("/").trimResults().omitEmptyStrings().splitToList(STR);
+        result.forEach(System.out::println);
+    }
+
+    @Test
+    public void testSplitFixLength() {
+        List<String> result = Splitter.fixedLength(4).splitToList("aaaabbbbccccdddd");
+        Assert.assertEquals(4, result.size());
+        Assert.assertEquals(result.get(0), "aaaa");
+        Assert.assertEquals(result.get(3), "dddd");
+    }
+
+}
