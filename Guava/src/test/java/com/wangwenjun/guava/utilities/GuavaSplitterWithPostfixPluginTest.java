@@ -34,7 +34,9 @@ public class GuavaSplitterWithPostfixPluginTest {
     @Test
     public void testSplitByRegexp(){
         List<String> result = Splitter.onPattern("/").trimResults().omitEmptyStrings().splitToList(STR);
-        result.forEach(System.out::println);
+        Assert.assertEquals(2, result.size());
+        Assert.assertEquals("四川省", result.get(0));
+        Assert.assertEquals("成都市", result.get(1));
     }
 
     @Test
