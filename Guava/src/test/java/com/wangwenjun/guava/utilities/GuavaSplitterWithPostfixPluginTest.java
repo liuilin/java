@@ -1,9 +1,5 @@
 package com.wangwenjun.guava.utilities;
 
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.IsNull.notNullValue;
-import static org.junit.Assert.assertThat;
-
 import com.google.common.base.Splitter;
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +28,7 @@ public class GuavaSplitterWithPostfixPluginTest {
     }
 
     @Test
-    public void testSplitByRegexp(){
+    public void testSplitByRegexp() {
         List<String> result = Splitter.onPattern("/").trimResults().omitEmptyStrings().splitToList(STR);
         Assert.assertEquals(2, result.size());
         Assert.assertEquals("四川省", result.get(0));
