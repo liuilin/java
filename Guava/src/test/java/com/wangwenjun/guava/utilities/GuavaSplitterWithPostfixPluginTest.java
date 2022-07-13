@@ -43,5 +43,4 @@ public class GuavaSplitterWithPostfixPluginTest {
         Assert.assertEquals(result.get(3), "dddd");
     }
 
-
 }
